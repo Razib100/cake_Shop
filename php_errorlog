@@ -1,0 +1,1 @@
+[09-Aug-2023 12:22:44 UTC] PHP Deprecated:  The behavior of unparenthesized expressions containing both '.' and '+'/'-' will change in PHP 8: '+'/'-' will take a higher precedence in /home/customer/www/ysabelles.ph/public_html/cakeShop/app/Http/Controllers/HomeController.php on line 295
