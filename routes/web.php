@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ImageController;
 use App\Http\Controllers\Admin\ProfileUpdateController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\OrderController;
@@ -67,6 +68,11 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
     Route::post('orders/unassign', [OrderController::class,'unassign'])->name('orders.unassign');
     Route::resource('orders', OrderController::class);
     Route::post('get_product_price',[OrderController::class,'getProductPrice'])->name('orders.getProductPrice');
+
+    /* Coupons MANAGEMENT */
+    Route::post('coupons/assign', [CouponController::class,'assign'])->name('coupons.assign');
+    Route::post('coupons/unassign', [CouponController::class,'unassign'])->name('coupons.unassign');
+    Route::resource('coupons', CouponController::class);
 
     /* SETTING MANAGEMENT */
     Route::post('delete_settings_image', [SettingController::class,'deleteSettingsImage']);

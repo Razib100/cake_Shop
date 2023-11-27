@@ -88,6 +88,13 @@
                     </li>
 
                     <li class="nav-item">
+                        <a href="{{ route('coupons.index') }}" class="nav-link @if($menu=='Coupons') active @endif">
+                            <i class="nav-icon fa fa-handshake"></i>
+                            <p>Manage Coupons</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
                         <a href="{{ route('customers.index') }}" class="nav-link @if($menu=='Customers') active @endif">
                             <i class="nav-icon fa fa-users"></i>
                             <p>Manage Customers</p>
